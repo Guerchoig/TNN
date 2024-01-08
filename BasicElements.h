@@ -1,5 +1,7 @@
-#pragma once
+#ifndef BASIC_ELEMENTS_H
+#define BASIC_ELEMENTS_H
 #include "Common.h"
+#include <cstring>
 
 // Nof neurons and layers
 constexpr layer_dim view_cols = 10;
@@ -255,7 +257,7 @@ public:
 					neuron.connections = new Connections;
 					
 					for (layer_dim distance = 1; distance <= max_distance; ++distance) {
-						for()
+						for(;;);
 					};
 					
 				};
@@ -268,3 +270,4 @@ public:
 		
 	}
 };
+#endif

@@ -1,54 +1,54 @@
 cmake_minimum_required(VERSION 3.10)
 
-set(PATCH_VERSION "6" CACHE INTERNAL "Patch version")
+set(PATCH_VERSION "0" CACHE INTERNAL "Patch version")
 set(PROJECT_VESRION 0.0.${PATCH_VERSION})
 
-project(helloworld VERSION ${PROJECT_VESRION})
+project(TNN VERSION ${PROJECT_VESRION})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-add_executable(helloworld_cli main.cpp)
-add_library(helloworld lib.cpp)
-add_executable(test_version test_version.cpp)
+add_executable(TNN TNN.cpp)
+#add_library(helloworld lib.cpp)
+add_executable(testTNN testTNN.cpp)
 
-set_target_properties(helloworld_cli helloworld test_version PROPERTIES
+set_target_properties(TNN testTNN PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
-target_include_directories(helloworld
+target_include_directories(TNN
     PRIVATE "${CMAKE_BINARY_DIR}"
 )
-set_target_properties(test_version PROPERTIES
+set_target_properties(testTNN PROPERTIES
     COMPILE_DEFINITIONS BOOST_TEST_DYN_LINK
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-target_link_libraries(helloworld_cli PRIVATE
-    helloworld
-)
-target_link_libraries(test_version
+#target_link_libraries(helloworld_cli PRIVATE
+#    helloworld
+#)
+target_link_libraries(testTNN
     ${Boost_LIBRARIES}
-    helloworld
+#    helloworld
 )
 
 if (MSVC)
-    target_compile_options(helloworld_cli PRIVATE
+    target_compile_options(TNN PRIVATE
         /W4
     )
-    target_compile_options(helloworld PRIVATE
-        /W4
-    )
-    target_compile_options(test_version PRIVATE
+ #   target_compile_options(helloworld PRIVATE
+ #       /W4
+ #   )
+    target_compile_options(testTNN PRIVATE
         /W4
     )
 else ()
-    target_compile_options(helloworld_cli PRIVATE
+    target_compile_options(TNN PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(helloworld PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
-    target_compile_options(test_version PRIVATE
+ #   target_compile_options(helloworld PRIVATE
+ #       -Wall -Wextra -pedantic -Werror
+ #   )
+    target_compile_options(testTNN PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
