@@ -55,7 +55,7 @@ endif()
 
 
 
-install(TARGETS helloworld_cli RUNTIME DESTINATION bin)
+install(TARGETS TNN RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 

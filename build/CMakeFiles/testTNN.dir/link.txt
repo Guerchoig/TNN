@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/testTNN.dir/testTNN.cpp.o -o testTNN  -Wl,-rpath,/usr/local/lib /usr/local/lib/libboost_unit_test_framework.so.1.84.0 

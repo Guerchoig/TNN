@@ -1,0 +1,11 @@
+/home/sasha/source/TNN/build/CMakeFiles/TNN.dir
+/home/sasha/source/TNN/build/CMakeFiles/testTNN.dir
+/home/sasha/source/TNN/build/CMakeFiles/package.dir
+/home/sasha/source/TNN/build/CMakeFiles/package_source.dir
+/home/sasha/source/TNN/build/CMakeFiles/test.dir
+/home/sasha/source/TNN/build/CMakeFiles/edit_cache.dir
+/home/sasha/source/TNN/build/CMakeFiles/rebuild_cache.dir
+/home/sasha/source/TNN/build/CMakeFiles/list_install_components.dir
+/home/sasha/source/TNN/build/CMakeFiles/install.dir
+/home/sasha/source/TNN/build/CMakeFiles/install/local.dir
+/home/sasha/source/TNN/build/CMakeFiles/install/strip.dir

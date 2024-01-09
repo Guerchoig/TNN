@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/TNN.dir/TNN.cpp.o -o TNN 
