@@ -205,6 +205,19 @@ TNN/fast:
 .PHONY : TNN/fast
 
 #=============================================================================
+# Target rules for targets named reservoir_sampling
+
+# Build rule for target.
+reservoir_sampling: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reservoir_sampling
+.PHONY : reservoir_sampling
+
+# fast build rule for target.
+reservoir_sampling/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/build
+.PHONY : reservoir_sampling/fast
+
+#=============================================================================
 # Target rules for targets named testTNN
 
 # Build rule for target.
@@ -240,6 +253,30 @@ TNN.s: TNN.cpp.s
 TNN.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TNN.dir/build.make CMakeFiles/TNN.dir/TNN.cpp.s
 .PHONY : TNN.cpp.s
+
+reservoir_sampling.o: reservoir_sampling.cpp.o
+.PHONY : reservoir_sampling.o
+
+# target to build an object file
+reservoir_sampling.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/reservoir_sampling.cpp.o
+.PHONY : reservoir_sampling.cpp.o
+
+reservoir_sampling.i: reservoir_sampling.cpp.i
+.PHONY : reservoir_sampling.i
+
+# target to preprocess a source file
+reservoir_sampling.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/reservoir_sampling.cpp.i
+.PHONY : reservoir_sampling.cpp.i
+
+reservoir_sampling.s: reservoir_sampling.cpp.s
+.PHONY : reservoir_sampling.s
+
+# target to generate assembly for a file
+reservoir_sampling.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/reservoir_sampling.cpp.s
+.PHONY : reservoir_sampling.cpp.s
 
 testTNN.o: testTNN.cpp.o
 .PHONY : testTNN.o
@@ -281,10 +318,14 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... TNN"
+	@echo "... reservoir_sampling"
 	@echo "... testTNN"
 	@echo "... TNN.o"
 	@echo "... TNN.i"
 	@echo "... TNN.s"
+	@echo "... reservoir_sampling.o"
+	@echo "... reservoir_sampling.i"
+	@echo "... reservoir_sampling.s"
 	@echo "... testTNN.o"
 	@echo "... testTNN.i"
 	@echo "... testTNN.s"

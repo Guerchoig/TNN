@@ -1,0 +1,2 @@
+/usr/bin/ar qc libreservoir_sampling.a CMakeFiles/reservoir_sampling.dir/reservoir_sampling.cpp.o
+/usr/bin/ranlib libreservoir_sampling.a

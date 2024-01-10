@@ -8,7 +8,7 @@ project(TNN VERSION ${PROJECT_VESRION})
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 add_executable(TNN TNN.cpp)
-#add_library(helloworld lib.cpp)
+add_library(reservoir_sampling reservoir_sampling.cpp)
 add_executable(testTNN testTNN.cpp)
 
 set_target_properties(TNN testTNN PROPERTIES
@@ -23,9 +23,9 @@ set_target_properties(testTNN PROPERTIES
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-#target_link_libraries(helloworld_cli PRIVATE
-#    helloworld
-#)
+target_link_libraries(reservoir_sampling PRIVATE
+    reservoir_sampling
+)
 target_link_libraries(testTNN
     ${Boost_LIBRARIES}
 #    helloworld
@@ -35,9 +35,9 @@ if (MSVC)
     target_compile_options(TNN PRIVATE
         /W4
     )
- #   target_compile_options(helloworld PRIVATE
- #       /W4
- #   )
+   target_compile_options(reservoir_sampling PRIVATE
+       /W4
+   )
     target_compile_options(testTNN PRIVATE
         /W4
     )
@@ -45,9 +45,9 @@ else ()
     target_compile_options(TNN PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
- #   target_compile_options(helloworld PRIVATE
- #       -Wall -Wextra -pedantic -Werror
- #   )
+   target_compile_options(reservoir_sampling PRIVATE
+       -Wall -Wextra -pedantic -Werror
+   )
     target_compile_options(testTNN PRIVATE
         -Wall -Wextra -pedantic -Werror
     )

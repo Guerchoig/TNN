@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/sasha/source/TNN/build
 
 # The main recursive "all" target.
 all: CMakeFiles/TNN.dir/all
+all: CMakeFiles/reservoir_sampling.dir/all
 all: CMakeFiles/testTNN.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/TNN.dir/clean
+clean: CMakeFiles/reservoir_sampling.dir/clean
 clean: CMakeFiles/testTNN.dir/clean
 .PHONY : clean
 
@@ -103,13 +105,39 @@ CMakeFiles/TNN.dir/clean:
 .PHONY : CMakeFiles/TNN.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/reservoir_sampling.dir
+
+# All Build rule for target.
+CMakeFiles/reservoir_sampling.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sasha/source/TNN/build/CMakeFiles --progress-num=3,4 "Built target reservoir_sampling"
+.PHONY : CMakeFiles/reservoir_sampling.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/reservoir_sampling.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sasha/source/TNN/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/reservoir_sampling.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sasha/source/TNN/build/CMakeFiles 0
+.PHONY : CMakeFiles/reservoir_sampling.dir/rule
+
+# Convenience name for target.
+reservoir_sampling: CMakeFiles/reservoir_sampling.dir/rule
+.PHONY : reservoir_sampling
+
+# clean rule for target.
+CMakeFiles/reservoir_sampling.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/reservoir_sampling.dir/build.make CMakeFiles/reservoir_sampling.dir/clean
+.PHONY : CMakeFiles/reservoir_sampling.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/testTNN.dir
 
 # All Build rule for target.
 CMakeFiles/testTNN.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testTNN.dir/build.make CMakeFiles/testTNN.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/testTNN.dir/build.make CMakeFiles/testTNN.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sasha/source/TNN/build/CMakeFiles --progress-num=3,4 "Built target testTNN"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sasha/source/TNN/build/CMakeFiles --progress-num=5,6 "Built target testTNN"
 .PHONY : CMakeFiles/testTNN.dir/all
 
 # Build rule for subdir invocation for target.

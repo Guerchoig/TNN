@@ -6,6 +6,11 @@
 },
 {
   "directory": "/home/sasha/source/TNN/build",
+  "command": "/usr/bin/g++   -g -Wall -Wextra -pedantic -Werror -o CMakeFiles/reservoir_sampling.dir/reservoir_sampling.cpp.o -c /home/sasha/source/TNN/reservoir_sampling.cpp",
+  "file": "/home/sasha/source/TNN/reservoir_sampling.cpp"
+},
+{
+  "directory": "/home/sasha/source/TNN/build",
   "command": "/usr/bin/g++ -DBOOST_TEST_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB  -g -Wall -Wextra -pedantic -Werror -std=gnu++14 -o CMakeFiles/testTNN.dir/testTNN.cpp.o -c /home/sasha/source/TNN/testTNN.cpp",
   "file": "/home/sasha/source/TNN/testTNN.cpp"
 }

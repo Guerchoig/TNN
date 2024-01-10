@@ -61,5 +61,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/TNN.dir/DependInfo.cmake"
+  "CMakeFiles/reservoir_sampling.dir/DependInfo.cmake"
   "CMakeFiles/testTNN.dir/DependInfo.cmake"
   )
